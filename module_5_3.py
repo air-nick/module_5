@@ -20,7 +20,8 @@ class House:
     def __eq__(self, other):
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
-        return False
+        elif isinstance(other, int):
+            return self.number_of_floors == other
 
     def __ne__(self, other):
         return not self == other
